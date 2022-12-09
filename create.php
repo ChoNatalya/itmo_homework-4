@@ -1,19 +1,21 @@
 <?php
-    if (isset($_POST['submit'])) {//($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $plantphoto = $_POST['plantphoto'];
         $name = $_POST['name'];
         $price = $_POST['price'];
-
-        $xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
+        
+        $xml = simplexml_load_file("data.xml");
         
         $task = $xml->addChild('plant', '');
         $task->addChild('name', $name);
         $task->addChild('price', $price);
+        $task->addChild('photo', $plantphoto);
         $task->addAttribute('id', $xml->count());
 
         $xml->saveXML('data.xml');
         header('location:list.php');
     }
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +30,10 @@
 
 <body>
     <form method="POST" action="create.php">
+        <br>
+        <input type="text" name="plantphoto" placeholder="url photo">
+        <br>
+        <br>
         <input type="text" name="name" placeholder="Kaktus plant">
         <br>
         <br>
