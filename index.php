@@ -1,5 +1,5 @@
 <?php
-$xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
+$xml = simplexml_load_file("data.xml");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,10 +113,10 @@ $xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
             </div>
          
 
-        <div id="plants_gallery container">
+        <div class="plants_gallery container">
             <?php foreach ($xml->plant as $plant) { ?>
-                <div class="gallery_item">
-                    <div class="gallery_item_photo" id="<?= $plant->photo_id ?>"></div>
+                <div class="gallery_item">        
+                    <img src="<?php echo $plant->photo ?>" alt="">
                     <p class="gallery_item_name"><?= $plant->name ?></p>
                     <p class="gallery_item_price">$ <?= $plant->price ?></p>
                 </div>
