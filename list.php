@@ -1,5 +1,5 @@
 <?php
-$xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
+$xml = simplexml_load_file("data.xml");
 ?>
 
 <!DOCTYPE html>
@@ -9,12 +9,12 @@ $xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media_style.css">
     <title>list of plants</title>
 </head>
 <body>
-    <h1>Plants list</h1>
+    <h1>Plant list</h1>
     <a href="create.php">Create new item</a>
     <br>
     <hr>
@@ -23,7 +23,9 @@ $xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
     <br>
     <?php foreach ($xml->plant as $plant) { ?>
         <div class="gallery_item php_list">
-            <div class="gallery_item_photo" id="<?= $plant->photo_id ?>"></div>
+            <div class="gallery_item_photo">
+                <img src="<?php echo $plant->photo?>" alt="">        
+            </div>
             <p class="gallery_item_name"><?= $plant->name ?></p>
             <p class="gallery_item_price">$ <?= $plant->price ?></p>
             <br>
