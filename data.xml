@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plants>
+    
+    
     <plant id="1">
-        <photo_id>kaktus</photo_id>
-        <name>Kaktus plants</name>
-        <price>85.000</price>
+        <photo>https://img.freepik.com/free-photo/cactus-in-a-pot_144627-17724.jpg?w=740&amp;t=st=1670620874~exp=1670621474~hmac=4a1ef873d5c8c7c8d283340db273f9556bf138a1cd865d37f23f9a0e491a8f2b</photo>
+        <name>Kecubung Plants</name>
+        <price>195.000</price>
     </plant>
     <plant id="2">
-        <photo_id>landak</photo_id>
-        <name>Landak Plants</name>
-        <price>105.000</price>
+        <photo>https://img.freepik.com/free-photo/small-barrel-cactus-in-a-terracotta-pot_53876-133225.jpg?w=740&amp;t=st=1670620934~exp=1670621534~hmac=38a86b551247af97973216f3f8c7400d5c48f147703273f65185f24c7910d76d</photo>
+        <name>Kurkuma Plants</name>
+        <price>155.000</price>
     </plant>
     <plant id="3">
-        <photo_id>kecubung_1</photo_id>
-        <name>Kecubung Plants</name>
-        <price>205.000</price>
+        <photo></photo>
+        <name>Baby Plants</name>
+        <price>200.000</price>
     </plant>
-    <plant id="4">
-        <photo_id>kecubung_2</photo_id>
-        <name>Kecubung Plants</name>
-        <price>85.000</price>
-    </plant>
-    <plant id="5">
-        <photo_id>kecubung_3</photo_id>
-        <name>Kecubung Plants</name>
-        <price>95.000</price>
-    </plant>
+       
 </plants>
